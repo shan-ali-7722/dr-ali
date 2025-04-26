@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ali Husnain - Professional Physiotherapy</title>
+    <style>
+        /* Color Variables */
+        :root {
+            --primary: #1E6091;
+            --secondary: #168AAD;
+            --accent: #34C3EB;
+            --light: #F5F9FC;
+            --dark: #333333;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 600;
+        }
+        
+        .nav-contact {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        
+        .nav-icon:hover {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 76px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Credentials Section */
+        .credentials-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* Publications Section */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .publication-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .publication-year {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+        }
+        
+        .timeline-date {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .testimonials h2 {
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            font-size: 5rem;
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            opacity: 0.2;
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+        }
+        
+        .social-icons {
+            margin: 20px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        /* Additional Mobile Responsiveness */
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .hero {
+                height: 80vh;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 8px;
+            }
+            
+            .timeline-container {
+                padding-left: 60px;
+            }
+            
+            .timeline::after {
+                left: 21px;
+            }
+            
+            .left::after, .right::after {
+                left: 5px;
+            }
+            
+            .service-card {
+                padding: 20px;
+            }
+            
+            .credentials-item, 
+            .publication-card {
+                padding: 20px;
+            }
+            
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+            
+            .contact-form input,
+            .contact-form textarea {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+            }
+            
+            .footer-links li {
+                margin: 5px 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .timeline-content {
+                padding: 15px;
+            }
+            
+            .timeline-container {
+                padding-left: 50px;
+                padding-right: 15px;
+            }
+            
+            .timeline::after {
+                left: 16px;
+            }
+            
+            .publications-grid,
+            .services-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-icon {
+                margin-bottom: 10px;
+            }
+            
+            .social-icons a {
+                font-size: 1.3rem;
+                margin: 0 8px;
+            }
+        }
+        
+        /* Mobile Navigation Improvements */
+        @media (max-width: 768px) {
+            header {
+                position: sticky;
+            }
+            
+            .hero {
+                margin-top: 0;
+            }
+            
+            /* Mobile menu toggle - you can add JavaScript to make this functional */
+            .mobile-menu-toggle {
+                display: none;
+                cursor: pointer;
+                font-size: 1.5rem;
+                color: var(--primary);
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Touch-friendly improvements */
+        @media (max-width: 768px) {
+            .btn, 
+            .nav-links a,
+            .footer-links a,
+            .social-icons a {
+                padding: 10px 12px;
+                display: inline-block;
+            }
+            
+            input, 
+            textarea, 
+            button, 
+            select {
+                font-size: 16px; /* Prevents iOS zoom on focus */
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Dr. Ali Husnain (PT)</div>
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="nav-contact">
+                        <a href="tel:+923017803182" class="nav-icon" title="Call">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/923065263182" target="_blank" class="nav-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Dr. Ali Husnain (PT)</h1>
+                <p>Specialized Physical Therapy with expertise in Neurological and Orthopedic Rehabilitation</p>
+                <a href="#contact" class="btn">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dr. Ali Husnain">
+                </div>
+                <div class="about-content">
+                    <h3>Passionate Physical Therapist</h3>
+                    <p>
+                        I am a passionate physical therapy graduate with extensive hands-on experience in neurological and orthopedic rehabilitation and therapeutic modalities. My expertise lies in developing individualized treatment plans and employing advanced manual therapy techniques to enhance patient outcomes.
+                    </p>
+                    <p>
+                        With a Doctor of Physical Therapy degree from Government College University Faisalabad and ongoing MPhil studies at King Edward Medical University, I combine clinical practice with academic excellence to provide evidence-based care.
+                    </p>
+                    <p>
+                        My approach to physiotherapy integrates the latest research with personalized care, ensuring that each patient receives the most effective treatment for their specific condition. I am committed to continuous professional development, regularly publishing research and attending conferences to stay at the forefront of physical therapy practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" style="background-color: white;">
+        <div class="container">
+            <h2>Areas of Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedic Rehabilitation</h3>
+                    <p>Specialized post-operative rehabilitation for ACL, TKR (Total Knee Replacement), and THR (Total Hip Replacement) surgeries, ensuring optimal recovery and return to function.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neurological Rehabilitation</h3>
+                    <p>Comprehensive treatment approaches for patients with neurological conditions, focusing on restoring mobility, function, and quality of life.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3>Manual Therapy Techniques</h3>
+                    <p>Advanced hands-on techniques including Kaltenborn methods, Mulligan's Mobilization with Movement (MWM), and Proprioceptive Neuromuscular Facilitation (PNF).</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Therapeutic Exercise</h3>
+                    <p>Customized exercise protocols designed to improve strength, flexibility, endurance, and overall function for various musculoskeletal conditions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Muscle Energy Techniques (MET)</h3>
+                    <p>Specialized approach using isometric contractions to relax and lengthen muscles, particularly effective for treating lumbosacral dysfunction.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h3>Intensive Care Rehabilitation</h3>
+                    <p>Early intervention and rehabilitation for critically ill patients in ICU settings, promoting faster recovery and preventing complications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">June 2024 - Present</span>
+                        <h3>PGR (Physiotherapy)</h3>
+                        <h4>Mayo Hospital Lahore, Pakistan</h4>
+                        <ul>
+                            <li>Developing post-operative rehabilitation plans for ACL, TKR, and THR surgeries</li>
+                            <li>Collaborating with orthopedic surgeons to ensure optimal patient outcomes</li>
+                            <li>Supervising junior physiotherapists and providing mentorship</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">June 2024 - Present</span>
+                        <h3>MPhil (Physiotherapy)</h3>
+                        <h4>King Edward Medical University Lahore, Pakistan</h4>
+                        <ul>
+                            <li>Delivering lectures and practical sessions on biomechanics, therapeutic exercises, and manual therapy</li>
+                            <li>Teaching physiotherapy students across 2nd, 3rd, and 4th years</li>
+                            <li>Contributing to academic research and program development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">September 2023 - March 2024</span>
+                        <h3>Physiotherapist Intern</h3>
+                        <h4>Allied Hospital Faisalabad, Pakistan</h4>
+                        <ul>
+                            <li>Treated patients in OPD, Neurosurgery ward, ICU, and Medical unit ward</li>
+                            <li>Designed post-operative rehabilitation plans for orthopedic and sports surgeries</li>
+                            <li>Refined manual therapy techniques including Kaltenborn, MWM, and PNF</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">December 2020 - March 2022</span>
+                        <h3>Internship</h3>
+                        <h4>Chiniot General Hospital Faisalabad, Pakistan</h4>
+                        <ul>
+                            <li>Developed skills in SOAP note documentation and patient history interviews</li>
+                            <li>Gained hands-on experience with therapeutic modalities and equipment</li>
+                            <li>Educated patients on home exercise programs for continued rehabilitation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background-color: white;">
+        <div class="container">
+            <h2>Education & Credentials</h2>
+            
+            <div class="credentials-item">
+                <h3>Doctor of Physical Therapy</h3>
+                <p><strong>Government College University Faisalabad, Pakistan</strong> | October 2018 - August 2023</p>
+                <p><strong>GPA:</strong> 3.64/4.00</p>
+                <p><strong>Thesis:</strong> "Comparative Effectiveness of Muscle Energy Technique With or Without Proprioceptive Neuromuscular Facilitation Pattern in Lumbosacral Dysfunction"</p>
+                <p><strong>Key Coursework:</strong> Therapeutic Exercises Foundations and Techniques, Biomechanics and Ergonomics, Anatomy, Kinesiology, and Manual Therapy</p>
+            </div>
+            
+            <div class="credentials-item">
+                <h3>HSSC/Pre-University</h3>
+                <p><strong>Board of Intermediate & Secondary Education, Faisalabad, Pakistan</strong> | May 2015 - September 2018</p>
+                <p><strong>Score:</strong> 976/1100</p>
+                <p><strong>Subjects:</strong> Biology, Physics, Chemistry, English</p>
+            </div>
+            
+            <div class="credentials-item">
+                <h3>Certifications & Professional Development</h3>
+                <ul>
+                    <li>Master Course of HVLA Techniques (December 2022)</li>
+                    <li>Modern Approaches of Taping Techniques (October 2019)</li>
+                    <li>Amal Fellowship - Career-Prep Fellow (March-June 2023)</li>
+                    <li>Member of Pakistan Physical Therapy Association (MPPTA) since August 2023</li>
+                </ul>
+            </div>
+            
+            <div class="credentials-item">
+                <h3>Conferences & Seminars</h3>
+                <ul>
+                    <li>1st International Conference on Integrated Care for Chronic Conditions (May 2024) - Received 1.5 CME hours</li>
+                    <li>15th Annual Conference of Pakistan Society for the Study of Liver Diseases (December 2021)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2>Research Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <span class="publication-year">2025</span>
+                    <h3>A Comparative Effectiveness of PNF Technique And Mulligan Concept of Mobilization on Pain, Range of Motion, and Functional Mobility in Text Neck Syndrome</h3>
+                    <p>This study evaluates and compares the effectiveness of two manual therapy approaches for treating text neck syndrome, a modern condition resulting from prolonged smartphone use.</p>
+                    <a href="https://doi.org/10.33897/fujrs.v5i1.419" target="_blank">Read Publication <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="publication-card">
+                    <span class="publication-year">2024</span>
+                    <h3>A Comparison of the Effects of Static Stretching and Mulligan Mobilization in Mechanical Neck Pain</h3>
+                    <p>This research compares two intervention techniques for patients suffering from mechanical neck pain, providing evidence for optimal clinical practice.</p>
+                    <a href="https://doi.org/10.61919/jhrr.v4i2.1229" target="_blank">Read Publication <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="publication-card">
+                    <span class="publication-year">2024</span>
+                    <h3>Comparative Effectiveness of Muscle Energy Technique (MET) With or Without Proprioceptive Neuromuscular Facilitation (PNF) Pattern in Lumbosacral Dysfunction (LSD)</h3>
+                    <p>This study investigates the efficacy of combining two therapeutic approaches for treating lumbosacral dysfunction, a common cause of lower back pain.</p>
+                    <a href="https://doi.org/10.54393/tt.v5i01.198" target="_blank">Read Publication <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Patient Success Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Dr. Ali's expertise in post-operative rehabilitation after my knee replacement was exceptional. His personalized approach and deep knowledge of orthopedic physiotherapy helped me regain mobility much faster than expected."</p>
+                    <h3>- Fatima K.</h3>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"I had been suffering from chronic neck pain for years. After just a few sessions with Dr. Ali's manual therapy techniques, I experienced significant relief. His approach combines scientific knowledge with genuine care."</p>
+                    <h3>- Imran S.</h3>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"As an athlete recovering from ACL surgery, I was concerned about returning to sport. Dr. Ali designed a comprehensive rehabilitation program that not only healed my injury but made me stronger than before."</p>
+                    <h3>- Ahmed R.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>(+92) 3017803182</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>(+92) 3065263182</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>alihusnainofficial123@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Practice Locations</h4>
+                        <p>Mayo Hospital, Lahore, Pakistan</p>
+                        <p>King Edward Medical University, Lahore, Pakistan</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 9am - 5pm</p>
+                        <p>Saturday: 9am - 1pm</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="social-links" style="margin-top: 30px; text-align: center;">
+                    <h4 style="margin-bottom: 15px;">Connect With Me</h4>
+                    <div class="social-icons" style="display: flex; justify-content: center; gap: 20px;">
+                        <a href="https://www.facebook.com/share/1QsHVHkXBz/" target="_blank" style="font-size: 2rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://youtube.com/@physiotherapywala?feature=shared" target="_blank" style="font-size: 2rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@draliphysio" target="_blank" style="font-size: 2rem;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/923065263182" target="_blank" style="font-size: 2rem;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Dr. Ali Husnain (PT)</div>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1QsHVHkXBz/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@physiotherapywala?feature=shared" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@draliphysio" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/923065263182" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 Dr. Ali Husnain - Physiotherapy Services. All Rights Reserved.</p>
+            <p>Member of Pakistan Physical Therapy Association (MPPTA)</p>
+        </div>
+    </footer>
+</body>
+</html>
